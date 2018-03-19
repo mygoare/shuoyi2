@@ -1,0 +1,46 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="x-ua-compatible" content="ie=edge")
+    meta(name="description" content="")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title= __('title')
+    link(rel="stylesheet", href="/css/index.css")
+  body
+    .container
+        header
+          img.header-logo(src="/images/logo.jpg")
+          .header-info
+            span.header-info-caption= __('headerCaption')
+            span.header-info-description= __('headerDescription')
+        main
+          .main-block.main-block-about
+            .main-block-caption
+              a(href="http://v.qq.com/vplus/8d867c94826823cfdef1e7c7ee68744c", target="_blank")
+                = __('about')
+                sup
+                  i.fa.fa-external-link.fa-fw
+            .main-block-content
+              .main-block-webchat
+                img(src="/images/qr.jpg")
+                span= __('weChat')
+              .main-block-subscribe
+                img(src="/images/subscribe.png")
+                span= __('subscribe')
+          .main-block.main-block-contact
+            .main-block-caption
+              = __('contact')
+            .main-block-content
+              span +86 17051039561
+
+        footer
+          span= __('companyName')
+            = " "
+            | &copy; #{year}
+          span
+            a(href="?lang=en") English
+            = " | "
+            a(href="?lang=cn") 大陆
+            = " | "
+            a(href="?lang=tw") 台灣
