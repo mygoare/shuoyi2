@@ -32,9 +32,9 @@ module.exports = {
       'post-deploy' : 'npm install --production && pm2 reload ecosystem.config.js --env production'
     },
     test : {
-      key: process.env.HOME+"/.vagrant.d/insecure_private_key",
       user : 'vagrant',
       host : '192.168.33.10',
+      port : '2222',
       ref  : 'origin/master',
       repo : 'https://Goare@bitbucket.org/Goare/shuoyi2.git',
       path : '/home/vagrant/shuoyi2',
