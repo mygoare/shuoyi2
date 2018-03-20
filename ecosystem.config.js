@@ -29,7 +29,7 @@ module.exports = {
       user : 'root',
       host : '167.99.68.197',
       ref  : 'origin/master',
-      repo : 'https://Goare@bitbucket.org/Goare/shuoyi2.git',
+      repo : 'git@bitbucket.org:Goare/shuoyi2.git',
       path : '/root/shuoyi2',
       'post-deploy' : 'npm install --production && pm2 reload ecosystem.config.js --env production'
     },
