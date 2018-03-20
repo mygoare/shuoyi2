@@ -7,7 +7,7 @@ module.exports = {
 
     // First application
     {
-      name      : 'API',
+      name      : 'shuoyi',
       script    : 'app.js',
       env: {
         // 默认开发环境
