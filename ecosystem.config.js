@@ -38,7 +38,7 @@ module.exports = {
       ref  : 'origin/master',
       repo : 'https://Goare@bitbucket.org/Goare/shuoyi2.git',
       path : '/home/vagrant/shuoyi2',
-      'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env test',
+      'post-deploy' : 'npm install && npm run dev > $HOME/app.log 2>&1',
       env  : {
         NODE_ENV: 'test'
       }
