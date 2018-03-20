@@ -46,7 +46,7 @@ app.set('trust proxy', 1)
 
 // route '/' will go to index.html
 app.get('/', (req, res) => {
-    console.log('res: ', req.getLocale(), res.getLocale())
+    // console.log('res: ', req.getLocale(), res.getLocale())
     res.render('index.pug', {
         year: new Date().getFullYear()
     }) // render html engine file in views folder
@@ -62,7 +62,7 @@ app.use(function (err, req, res, next) {
   })
 
 
-console.log(port, process.env.NODE_ENV)
+// console.log(port, process.env.NODE_ENV)
 
 
 app.listen(port, () => console.log('Example app listening on port '+ port +'!'))
