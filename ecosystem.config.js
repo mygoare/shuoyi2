@@ -10,9 +10,11 @@ module.exports = {
       name      : 'API',
       script    : 'app.js',
       env: {
-        COMMON_VARIABLE: 'true'
+        // 默认开发环境
+        NODE_ENV: 'development'
       },
       env_production : {
+        // 命令行 切换后 切换到 生产环境
         NODE_ENV: 'production'
       }
     }
@@ -31,17 +33,14 @@ module.exports = {
       path : '/root/shuoyi2',
       'post-deploy' : 'npm install --production && pm2 reload ecosystem.config.js --env production'
     },
-    test : {
+    dev : {
       user : 'vagrant',
       host : '127.0.0.1',
       port : '2222',
       ref  : 'origin/master',
       repo : 'https://Goare@bitbucket.org/Goare/shuoyi2.git',
       path : '/home/vagrant/shuoyi2',
-      'post-deploy' : 'npm install && npm run dev > $HOME/app.log 2>&1',
-      env  : {
-        NODE_ENV: 'test'
-      }
+      'post-deploy' : 'npm install && pm2 reload ecosystem.config.js',
     }
   }
 };
