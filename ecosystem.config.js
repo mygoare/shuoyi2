@@ -33,7 +33,7 @@ module.exports = {
     },
     test : {
       user : 'vagrant',
-      host : '192.168.33.10',
+      host : '127.0.0.1',
       port : '2222',
       ref  : 'origin/master',
       repo : 'https://Goare@bitbucket.org/Goare/shuoyi2.git',
